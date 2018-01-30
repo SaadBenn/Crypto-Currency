@@ -1,0 +1,14 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var addMapEntry = require(_dependencyMap[0], './_addMapEntry'),
+      arrayReduce = require(_dependencyMap[1], './_arrayReduce'),
+      mapToArray = require(_dependencyMap[2], './_mapToArray');
+
+  var CLONE_DEEP_FLAG = 1;
+
+  function cloneMap(map, isDeep, cloneFunc) {
+    var array = isDeep ? cloneFunc(mapToArray(map), CLONE_DEEP_FLAG) : mapToArray(map);
+    return arrayReduce(array, addMapEntry, new map.constructor());
+  }
+
+  module.exports = cloneMap;
+});

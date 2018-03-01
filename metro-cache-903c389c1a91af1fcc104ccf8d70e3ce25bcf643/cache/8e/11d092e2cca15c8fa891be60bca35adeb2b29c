@@ -1,8 +1,0 @@
-__d(function (global, require, module, exports, _dependencyMap) {
-  function addSetEntry(set, value) {
-    set.add(value);
-    return set;
-  }
-
-  module.exports = addSetEntry;
-});

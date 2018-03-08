@@ -8,7 +8,9 @@ import promise from 'redux-promise';
 import RootReducer from './Reducers';
 
 
-const Store = createStore(RootReducer, 
+let middleware = applyMiddleware(thunk, promise, logger);
+
+let Store = createStore(RootReducer, 
 	compose(
 		middleware,
 		devTools({
@@ -18,3 +20,6 @@ const Store = createStore(RootReducer,
 		}),
 	)
 );
+
+
+export default Store;

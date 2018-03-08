@@ -17,6 +17,11 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js"
+    "postinstall": "remotedev-debugger -hostname localhost - port 5678 - injectserver"
+  },
+  "remotedev": {
+    "hostname": "localhost",
+    "port": 5678
   },
   "jest": {
     "preset": "jest-expo"

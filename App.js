@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Header } from './src/components';
+import { View } from 'react-native';
+
+import { Header, CryptoContainer } from './src/components';
 import Store from './src/Store';
 import { Provider } from './src/components';
 
@@ -9,7 +10,8 @@ export default class App extends Component {
     return (
       <Provider store={Store}>
       	<View>
-      		<Header/>
+      		<Header />
+      		<CryptoContainer />
       	</View>
       </Provider>		
     );

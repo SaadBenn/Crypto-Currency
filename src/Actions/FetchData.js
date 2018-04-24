@@ -1,5 +1,10 @@
 import axios from 'axios';
 import { apiBaseURL } from '../../CryptoAPI';
+import  {
+	FETCHING_DATA,
+	FETCHING_DATA_SUCCESS,
+	FETCHING_DATA_FAIL
+} from './ActionTypes';
 
 export default function FetchData() {
 	return dispatch => {

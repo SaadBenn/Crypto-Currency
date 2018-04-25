@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import { Header, CryptoContainer } from './src/components';
 import Store from './src/Store';
-import { Provider } from './src/components';
+import { Provider } from 'react-redux';
 
 export default class App extends Component {
   render() {

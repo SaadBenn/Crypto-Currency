@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { apiBaseURL } from '../../../CryptoAPI';
+import { apiBaseURL } from './../../CryptoAPI';
 import {
 	FETCHING_DATA,
 	FETCHING_DATA_SUCCESS,

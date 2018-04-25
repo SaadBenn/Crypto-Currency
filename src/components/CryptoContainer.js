@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
 import FetchData from './../Actions/FetchData';
 import Coin from './Coin';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 class CryptoContainer extends Component {
 	
@@ -28,8 +29,21 @@ class CryptoContainer extends Component {
 
 	render() {
 		const { crypto } = this.props;
+		if (crypto.isFetching) {
+			return (
+				<View>
+					<Spinner
+					visible={crypto.isFetching}
+					textContent={"Loading..."}
+					textStyle={{color: '#253145'}}
+					animation:"fade"
+					/>
+				</View>	
+			)
+		}
+		
 		return (
-			<View>
+			<View>	
 				{this.renderCoin()}
 			</View>
 		)

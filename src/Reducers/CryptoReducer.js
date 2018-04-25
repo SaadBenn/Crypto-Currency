@@ -11,7 +11,7 @@ const initialState = {
 	errorMessage: null,
 };
 
-export default function(state = [], action) {
+export default function(state = initialState , action) {
 
 	switch(action.type) {
 
